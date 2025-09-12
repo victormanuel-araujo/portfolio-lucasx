@@ -1,0 +1,26 @@
+.button-component {
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  background-color: var(--color-primary-2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+.button-component > span {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.button-component:hover, .button-component:active {
+  background-color: var(--color-secondary);
+}
+
+.button-component:hover span {
+  transition: all .3s ease-in-out;
+  font-weight: 600;
+}
