@@ -1,31 +1,56 @@
 import { AsideHeader } from "../../components/aside-header";
+import { LayoutGroup, motion } from "motion/react";
 import "./home.css";
 
-const images = [
-  "/illustrations/illustration-1.jpg",
-  "/illustrations/illustration-2.webp",
-  "/illustrations/illustration-3.jpg",
-  "/illustrations/illustration-4.jpg",
-  "/illustrations/illustration-5.jpg",
-  "/illustrations/illustration-6.jpg",
-  "/illustrations/illustration-7.jpg",
-  "/illustrations/illustration-8.jpeg",
-];
+import { useMemo, useState } from "react";
+import { ViewModeTab } from "./components/view-mode-tab/view-mode-tab.component";
+import { ViewModes } from "./components/view-mode-tab/view-mode-tab.types";
+import { DESIGNS, ILLUSTRATIONS } from "./home.constants";
+import { SelectionList } from "./home.types";
 
 export const HomePage = () => {
-  return (
-    <main className="flex flex-row">
-      <AsideHeader />
+  const [viewMode, setViewMode] = useState<ViewModes>(ViewModes.LIST);
+  const [selectionList, setSelectionList] = useState<SelectionList>(
+    SelectionList.ILLUSTRATIONS
+  );
 
-      <div className="overflow-scroll h-[100vh] grid grid-cols-3">
-        {images.map((img) => (
-          <img
-            src={img}
-            key={img}
-            className="w-full h-full grid object-cover"
-          />
-        ))}
-      </div>
+  const galleryItems = useMemo(() => {
+    if (selectionList === SelectionList.ILLUSTRATIONS) {
+      return ILLUSTRATIONS;
+    }
+    if (selectionList === SelectionList.DESIGNS) {
+      return DESIGNS;
+    }
+
+    return [];
+  }, [selectionList]);
+
+  return (
+    <main className="flex flex-row relative">
+      <AsideHeader
+        selectionList={selectionList}
+        setSelectionList={setSelectionList}
+      />
+      <ViewModeTab viewMode={viewMode} setViewMode={setViewMode} />
+
+      <LayoutGroup>
+        <div
+          className="overflow-scroll h-[100vh] grid grid-cols-3"
+          style={{
+            gridTemplateRows: "repeat(auto-fill, minmax(360px, 480px))",
+          }}
+        >
+          {galleryItems.map(({ cover, className }, index) => (
+            <motion.img
+              layout
+              src={cover}
+              key={index}
+              transition={{ type: "tween", duration: 0.4 }}
+              className={`w-full h-full grid object-cover ${className ?? ""}`}
+            />
+          ))}
+        </div>
+      </LayoutGroup>
     </main>
   );
 };
