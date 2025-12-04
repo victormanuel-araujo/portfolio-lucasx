@@ -53,9 +53,6 @@ export const HomePage = () => {
               key={index}
               layout="position"
               layoutId={`gallery-item-${selectionList}-${index}`}
-              transition={{
-                layout: { type: "spring", stiffness: 420, damping: 40 },
-              }}
               className={`w-full h-full grid ${
                 className ?? ""
               } relative image-hover-effect`}
@@ -66,7 +63,7 @@ export const HomePage = () => {
                 className="w-full h-full object-cover object-center"
               />
               {carousel.length > 1 && (
-                <PhotoLibraryIcon className="absolute top-2 right-2" />
+                <PhotoLibraryIcon className="absolute top-2 right-2 z-20" />
               )}
             </motion.div>
           ))}

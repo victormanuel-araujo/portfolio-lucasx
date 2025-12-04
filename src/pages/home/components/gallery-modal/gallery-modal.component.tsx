@@ -1,6 +1,8 @@
 import { AnimatePresence, motion } from "motion/react";
 import type { GalleryModalProps } from "./gallery-modal.types";
 import "./gallery-modal.css";
+import CloseIcon from "@mui/icons-material/Close";
+import { FramerDraggableCarousel } from "../draggable-carousel/draggable-carousel.component";
 
 export const GalleryModal = ({
   selectedIndex,
@@ -28,10 +30,13 @@ export const GalleryModal = ({
               onClick={handleCloseModal}
               className="absolute right-3 top-3 z-10 rounded-full bg-black/60 px-3 py-1 text-xs text-white hover:bg-black/80"
             >
-              fechar
+              <CloseIcon />
             </button>
 
-            <div className="w-full h-full bg-black flex items-center justify-center">
+            <FramerDraggableCarousel
+              carousel={galleryItems[selectedIndex].carousel}
+            />
+            {/* <div className="w-full h-full bg-black flex items-center justify-center">
               <motion.img
                 key={
                   galleryItems[selectedIndex].carousel[0] ??
@@ -43,7 +48,7 @@ export const GalleryModal = ({
                 }
                 className="max-h-[90vh] w-auto object-contain"
               />
-            </div>
+            </div> */}
           </motion.div>
         </motion.div>
       )}

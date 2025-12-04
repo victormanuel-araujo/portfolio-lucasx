@@ -66,12 +66,11 @@ export const ILLUSTRATIONS: GalleryItem[] = [
   },
   {
     cover: "/illustrations/4/1.jpg",
-    carousel: [
-      "/illustrations/4/1.jpg",
-      "/illustrations/4/2.jpg",
-      "/illustrations/4/3.jpg",
-      "/illustrations/4/4.jpg",
-    ],
+    carousel: ["/illustrations/4/1.jpg", "/illustrations/4/2.jpg"],
+  },
+  {
+    cover: "/illustrations/8/1.jpg",
+    carousel: ["/illustrations/8/1.jpg", "/illustrations/8/2.jpg"],
   },
   {
     cover: "/illustrations/6/1.jpg",
@@ -97,6 +96,11 @@ export const ILLUSTRATIONS: GalleryItem[] = [
     carousel: ["/illustrations/9/1.jpg", "/illustrations/9/2.jpg"],
   },
   {
+    cover: "/illustrations/5/1.jpg",
+    carousel: ["/illustrations/5/1.jpg"],
+    className: "col-span-2",
+  },
+  {
     cover: "/illustrations/10/1.jpg",
     carousel: ["/illustrations/10/1.jpg"],
   },
@@ -111,22 +115,22 @@ export const ILLUSTRATIONS: GalleryItem[] = [
     ],
   },
   {
-    cover: "/illustrations/5/1.jpg",
-    carousel: ["/illustrations/5/1.jpg"],
-    className: "col-span-2",
-  },
-  {
     className: "col-span-2",
     cover: "/illustrations/11/1.jpg",
     carousel: ["/illustrations/11/1.jpg"],
   },
   {
+    className: "col-span-2",
     cover: "/illustrations/14/1.jpg",
     carousel: ["/illustrations/14/1.jpg"],
   },
   {
     cover: "/illustrations/17/1.jpg",
     carousel: ["/illustrations/17/1.jpg"],
+  },
+  {
+    cover: "/illustrations/24/1.jpg",
+    carousel: ["/illustrations/24/1.jpg"],
   },
   {
     className: "col-span-2",
@@ -187,23 +191,23 @@ export const MOTIONS: GalleryItem[] = [
     className: "col-span-2 row-span-2",
   },
   {
+    cover: "/motions/3/thumb.jpg",
+    carousel: ["/motions/3/thumb.jpg", "/motions/3/1.mp4"],
+  },
+  {
     cover: "/motions/1/thumb.jpg",
     carousel: ["/motions/1/thumb.jpg", "/motions/1/1.mp4"],
+  },
+  {
+    cover: "/motions/6/thumb.jpg",
+    carousel: ["/motions/6/thumb.jpg", "/motions/6/1.gif", "/motions/6/2.gif"],
   },
   {
     cover: "/motions/2/thumb.jpg",
     carousel: ["/motions/2/thumb.jpg", "/motions/2/1.gif", "/motions/2/2.mp4"],
   },
   {
-    cover: "/motions/3/thumb.jpg",
-    carousel: ["/motions/3/thumb.jpg", "/motions/3/1.mp4"],
-  },
-  {
     cover: "/motions/4/thumb.jpg",
     carousel: ["/motions/4/thumb.jpg", "/motions/4/1.mp4"],
-  },
-  {
-    cover: "/motions/6/thumb.jpg",
-    carousel: ["/motions/6/thumb.jpg", "/motions/6/1.gif", "/motions/6/2.gif"],
   },
 ];
