@@ -1,5 +1,5 @@
 export enum SelectionList {
-  ILLUSTRATIONS = "Illustrations",
-  DESIGNS = "Designs",
+  ILLUSTRATIONS = "Ilustração",
+  DESIGNS = "Design",
   MOTION = "Motion",
 }

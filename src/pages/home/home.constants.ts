@@ -200,11 +200,11 @@ export const MOTIONS: GalleryItem[] = [
   },
   {
     cover: "/motions/6/thumb.jpg",
-    carousel: ["/motions/6/thumb.jpg", "/motions/6/1.gif", "/motions/6/2.gif"],
+    carousel: ["/motions/6/thumb.jpg", "/motions/6/1.gif"],
   },
   {
     cover: "/motions/2/thumb.jpg",
-    carousel: ["/motions/2/thumb.jpg", "/motions/2/1.gif", "/motions/2/2.mp4"],
+    carousel: ["/motions/2/thumb.jpg", "/motions/2/1.gif"],
   },
   {
     cover: "/motions/4/thumb.jpg",

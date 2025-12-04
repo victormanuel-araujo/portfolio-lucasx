@@ -43,10 +43,8 @@ export const HomePage = () => {
 
       <LayoutGroup>
         <div
-          className="overflow-scroll h-[100vh] grid grid-cols-3"
-          style={{
-            gridTemplateRows: "repeat(3, minmax(420px, 480px))",
-          }}
+          id="gallery-container"
+          className="h-[100vh] grid home-gallery-grid"
         >
           {galleryItems.map(({ cover, carousel, className }, index) => (
             <motion.div
