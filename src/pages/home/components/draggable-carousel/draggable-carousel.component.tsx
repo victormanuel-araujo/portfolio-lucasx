@@ -70,7 +70,7 @@ export const FramerDraggableCarousel = ({
             <>
               <div className="w-10 h-full flex items-center justify-center ml-4 z-40 absolute">
                 <div
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-black/50 cursor-pointer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-black/50 cursor-pointer hover:border-1 hover:border-white transition-all duration-150"
                   onClick={handlePrevious}
                 >
                   <ChevronLeftIcon
@@ -83,7 +83,7 @@ export const FramerDraggableCarousel = ({
 
               <div className="w-10 h-full flex items-center justify-center mr-4 z-40 absolute right-0">
                 <div
-                  className="w-10 h-10 flex items-center justify-center rounded-full bg-black/50 cursor-pointer"
+                  className="w-10 h-10 flex items-center justify-center rounded-full bg-black/50 cursor-pointer  hover:border-1 hover:border-white transition-all duration-150"
                   onClick={handleNext}
                 >
                   <ChevronRightIcon
@@ -97,8 +97,8 @@ export const FramerDraggableCarousel = ({
           )}
 
           <motion.div
-            className="flex h-full"
             drag="x"
+            className="flex h-full"
             dragElastic={0.2}
             dragMomentum={false}
             onDragStart={() => setIsDragging(true)}
@@ -110,7 +110,9 @@ export const FramerDraggableCarousel = ({
                 key={item}
                 className="shrink-0 w-full flex items-center justify-center relative"
                 style={{
-                  backgroundImage: `url(${item})`,
+                  backgroundImage: item.endsWith(".mp4")
+                    ? `url(${carousel[0]})`
+                    : `url(${item})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -122,12 +124,23 @@ export const FramerDraggableCarousel = ({
                     WebkitBackdropFilter: "blur(12px)",
                   }}
                 />
-                <img
-                  src={item}
-                  alt={item}
-                  draggable={false}
-                  className="w-auto max-h-full object-cover select-none pointer-events-none z-10"
-                />
+                {item.endsWith(".mp4") ? (
+                  <video
+                    controls
+                    loop
+                    src={item}
+                    className="w-auto max-h-full object-cover z-80 mb-20"
+                  />
+                ) : (
+                  <>
+                    <img
+                      src={item}
+                      alt={item}
+                      draggable={false}
+                      className="w-auto max-h-full object-cover select-none pointer-events-none z-10"
+                    />
+                  </>
+                )}
               </div>
             ))}
           </motion.div>

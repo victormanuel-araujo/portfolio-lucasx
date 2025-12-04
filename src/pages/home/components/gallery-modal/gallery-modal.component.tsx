@@ -28,7 +28,7 @@ export const GalleryModal = ({
             <button
               type="button"
               onClick={handleCloseModal}
-              className="absolute right-3 top-3 z-10 rounded-full bg-black/60 px-3 py-1 text-xs text-white hover:bg-black/80"
+              className="absolute right-3 top-3 rounded-full bg-black/60 px-3 py-1 text-xs text-white hover:bg-black/80 z-50"
             >
               <CloseIcon />
             </button>
@@ -36,19 +36,6 @@ export const GalleryModal = ({
             <FramerDraggableCarousel
               carousel={galleryItems[selectedIndex].carousel}
             />
-            {/* <div className="w-full h-full bg-black flex items-center justify-center">
-              <motion.img
-                key={
-                  galleryItems[selectedIndex].carousel[0] ??
-                  galleryItems[selectedIndex].cover
-                }
-                src={
-                  galleryItems[selectedIndex].carousel[0] ??
-                  galleryItems[selectedIndex].cover
-                }
-                className="max-h-[90vh] w-auto object-contain"
-              />
-            </div> */}
           </motion.div>
         </motion.div>
       )}
