@@ -1,0 +1,3 @@
+.modal-motion-container {
+  will-change: transform, opacity;
+}

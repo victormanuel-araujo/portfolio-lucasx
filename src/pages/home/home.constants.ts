@@ -60,7 +60,7 @@ export const ILLUSTRATIONS: GalleryItem[] = [
     cover: "/illustrations/3/1.webp",
     carousel: [
       "/illustrations/3/1.webp",
-      // arquivo 2.mp4 foi ignorado por não ser imagem
+      "/illustrations/3/2.mp4",
       "/illustrations/3/3.jpg",
     ],
   },
@@ -92,7 +92,6 @@ export const ILLUSTRATIONS: GalleryItem[] = [
     carousel: ["/illustrations/7/1.jpg", "/illustrations/7/2.jpg"],
     className: "col-span-2 row-span-2",
   },
-  // pasta 8 está vazia, então foi ignorada
   {
     cover: "/illustrations/9/1.jpg",
     carousel: ["/illustrations/9/1.jpg", "/illustrations/9/2.jpg"],
@@ -177,5 +176,34 @@ export const DESIGNS: GalleryItem[] = [
   {
     cover: "/design/8/1.jpg",
     carousel: ["/design/8/1.jpg"],
+  },
+];
+
+export const MOTIONS: GalleryItem[] = [
+  {
+    cover: "/motions/5/thumb.jpg",
+    carousel: ["/motions/5/thumb.jpg", "/motions/5/1.mp4"],
+
+    className: "col-span-2 row-span-2",
+  },
+  {
+    cover: "/motions/1/thumb.jpg",
+    carousel: ["/motions/1/thumb.jpg", "/motions/1/1.mp4"],
+  },
+  {
+    cover: "/motions/2/thumb.jpg",
+    carousel: ["/motions/2/thumb.jpg", "/motions/2/1.gif", "/motions/2/2.mp4"],
+  },
+  {
+    cover: "/motions/3/thumb.jpg",
+    carousel: ["/motions/3/thumb.jpg", "/motions/3/1.mp4"],
+  },
+  {
+    cover: "/motions/4/thumb.jpg",
+    carousel: ["/motions/4/thumb.jpg", "/motions/4/1.mp4"],
+  },
+  {
+    cover: "/motions/6/thumb.jpg",
+    carousel: ["/motions/6/thumb.jpg", "/motions/6/1.gif", "/motions/6/2.gif"],
   },
 ];
