@@ -34,9 +34,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Download dependencies
-        run: pnpm install
+        run: yarn install
       - name: Build project 
-        run: npm run vite build
+        run: yarn vite build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
